@@ -50,6 +50,24 @@ This is a web application that allows users to sign up, log in, and access a hom
 - **Authentication**:
   - Sessions (using `express-session`)
   - Cookies
+  - 
+
+    ## user
+    
+    ![Screenshot 2025-01-04 174356](https://github.com/user-attachments/assets/6abbaf1b-948e-4079-90c1-776793eb4a43)
+    -User Signup
+    ![Screenshot 2025-01-04 174319](https://github.com/user-attachments/assets/25b67d28-1c24-4023-bea9-01f4d3a31a9b)
+    -User Login
+    ![Screenshot 2025-01-04 174451](https://github.com/user-attachments/assets/62674cc7-e17a-4b65-9220-aa72b7ee069f)
+    -User Home
+
+    ## Admin
+    
+    -![Screenshot 2025-01-04 174509](https://github.com/user-attachments/assets/2e560cbd-a397-4d59-9ee8-ca304933eb41)
+     admin Login
+     ![Screenshot 2025-01-04 173551](https://github.com/user-attachments/assets/7ab6ff4e-bf76-4ad2-af29-8888b0314119)
+     admin Dashbord
+  - 
   
 ## Installation
 
