@@ -34,7 +34,7 @@
                 <button class="add-user-btn" onclick="openAddUserModal()">Add New User</button>
 
             </div>
-            <table class="user-table">
+            <table id="user-table" class="user-table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -45,7 +45,8 @@
                 <tbody>
                     {{#each users}}
                     <tr>
-                        <td>{{@index}}</td>
+                    
+                        <td class="index">{{@index}}</td>
                         <td>{{this.email}}</td>
                         <td>
                             <button class="edit-btn"
@@ -59,6 +60,20 @@
         </section>
     </div>
 
+  {{!-- script for start Dashbord index from 1 --}}
+<script>
+    window.onload = function() {
+        const rows = document.querySelectorAll('#user-table tr');
+        let index = 1; 
+        rows.forEach(row => {
+            const indexCell = row.querySelector('.index');
+            if (indexCell) {
+                indexCell.textContent = index;
+                index++;
+            }
+        });
+    }
+</script>
 
     <!-- Add User Modal -->
     <div id="addUserModal" class="modal">

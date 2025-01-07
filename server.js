@@ -49,10 +49,7 @@ app.get('/admin', (req, res) => {
 //   res.render("error")
 // })
 
-// app.use((req, res) => {
-//  res.status(404)
-//   res.render('error')
-// })
+
 
 //route set
 app.use('/user', userRoutes)
