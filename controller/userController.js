@@ -97,7 +97,7 @@ const loadHome = (req, res) => {
     //split email to get username
     const email = req.session.user.email;
     const username = email.substring(0, email.indexOf('@'));
-    res.render('user/userHome',{ username: username })
+    res.render('user/userHome',{ username:username})
 }
 
 const logout = (req, res) => {

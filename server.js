@@ -23,6 +23,7 @@ app.use(session({
 //flash
 app.use(flash());
 
+//store Flash mesages
 app.use((req, res, next) => {
   res.locals.message || null;
   delete req.session.message
