@@ -1,4 +1,4 @@
-# Login Page with Admin Panel
+# User-management-system 
 
 This is a web application that allows users to sign up, log in, and access a home page. The application also features an admin panel where the admin can manage user data, including performing searches, creating, deleting, and editing user information. The user data is stored in a MongoDB database, and authentication is handled using sessions and cookies.
 
