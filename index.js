@@ -64,7 +64,7 @@ app.use((req, res) => {
 
 connectDB();
 
-const PORT = 3000;
+const PORT = 2000;
 const HOST = 'http://localhost'
 app.listen(PORT, () => console.log(`server is running at ${HOST}:${PORT}`)
 )

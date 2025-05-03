@@ -1,4 +1,4 @@
-const adminModel = require('../model/adminModel');
+// const adminModel = require('../model/adminModel');
 const bcrypt = require('bcrypt');
 const userModel = require('../model/userModel');
 const saltround=10;
@@ -13,7 +13,7 @@ const login = async (req, res) => {
     try {
         const { username, password } = req.body;
 
-        const admin = await adminModel.findOne({ username });
+        const admin = await userModel.findOne({ email:username });
         if (!admin) {
             req.flash("error","Incorrect username or password")
             return res.redirect('/admin/login');
@@ -22,6 +22,10 @@ const login = async (req, res) => {
         const isMatch = await bcrypt.compare(password, admin.password);
         if (!isMatch) {
             req.flash("error","Incorrect username or password")
+            return res.redirect('/admin/login');
+        }
+        if (!admin.isAdmin){
+            req.flash("error", "You are not authorized to access this page");
             return res.redirect('/admin/login');
         }
 
